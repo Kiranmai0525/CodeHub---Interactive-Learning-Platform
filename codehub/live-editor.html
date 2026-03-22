@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Editor - CodeHub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* [KEEP ALL STYLES FROM PREVIOUS VERSION - SAME] */
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb) !important;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .editor-hero {
+            padding: 120px 2rem 80px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .editor-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .editor-hero p { font-size: 1.3rem; }
+        
+        .editor-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .editor-tabs {
+            display: flex;
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px 15px 0 0;
+            padding: 0;
+            margin-bottom: 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 20px;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            border-radius: 15px 15px 0 0;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .tab-btn:hover { background: rgba(102,126,234,0.1); }
+        .tab-btn.active:hover { background: #667eea; }
+        
+        .editor-content {
+            background: rgba(255,255,255,0.95);
+            border-radius: 0 0 20px 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            min-height: 70vh;
+        }
+        
+        .editor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .editor-area {
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            height: 400px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            padding: 1rem;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.3s ease;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            line-height: 1.6;
+        }
+        
+        .editor-area:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102,126,234,0.1);
+        }
+        
+        .preview-area {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 1.5rem;
+            height: 400px;
+            overflow: auto;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            background: #f8f9fa;
+        }
+        
+        .run-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            margin-top: 1rem;
+        }
+        
+        .run-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102,126,234,0.4);
+        }
+        
+        .external-link {
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+        
+        .external-link:hover {
+            background: #218838;
+            color: white;
+        }
+        
+        .hidden { display: none; }
+        
+        @media (max-width: 768px) {
+            .editor-grid { grid-template-columns: 1fr; }
+            .editor-tabs { flex-direction: column; }
+            .tab-btn { border-radius: 0; }
+            .tab-btn:first-child { border-radius: 15px 15px 0 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">CodeHub</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="html-course.html" class="nav-link">HTML</a></li>
+            <li><a href="css-course.html" class="nav-link">CSS</a></li>
+            <li><a href="js-course.html" class="nav-link">JavaScript</a></li>
+            <li><a href="python-course.html" class="nav-link">Python</a></li>
+            <li><a href="c-course.html" class="nav-link">C</a></li>
+            <li><a href="live-editor.html" class="nav-link active">Live Editor</a></li>
+            <li><a href="#" onclick="showLogin()">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <div class="editor-hero">
+        <h1>Live Code Editor</h1>
+        <p>Write, test, and run code instantly</p>
+    </div>
+
+    <div class="editor-container">
+        <!-- Editor Tabs -->
+        <div class="editor-tabs">
+            <button class="tab-btn active" onclick="switchTab('html-js')">HTML/CSS/JS</button>
+            <button class="tab-btn" onclick="switchTab('python')">Python</button>
+            <button class="tab-btn" onclick="switchTab('c')">C</button>
+        </div>
+
+        <!-- HTML/CSS/JS Editor - FIXED -->
+        <div id="html-js-tab" class="editor-content">
+            <div class="editor-grid">
+                <div>
+                    <h3>📝 Code Editor</h3>
+                    <textarea id="code-editor" class="editor-area" placeholder="Write your HTML/CSS/JS here...">
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial; text-align: center; padding: 50px; background: linear-gradient(45deg, #667eea, #764ba2); color: white; }
+        h1 { font-size: 2.5rem; }
+    </style>
+</head>
+<body>
+    <h1>Hello CodeHub!</h1>
+    <p>Your live code works! 🎉</p>
+    <button onclick="alert('Live editor works!')">Test Button</button>
+</body>
+</html>
+                    </textarea>
+                    <button class="run-btn" onclick="runHtmlCode()">🚀 Run Code</button>
+                </div>
+                <div>
+                    <h3>👁️ Live Preview</h3>
+                    <iframe id="preview-frame" class="preview-area" sandbox="allow-scripts allow-same-origin"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Python Editor - FIXED LINKS -->
+        <div id="python-tab" class="editor-content hidden">
+            <h3>🐍 Python Playground</h3>
+            <p>Professional Python execution with input/output support:</p>
+            <a href="https://onecompiler.com/python" target="_blank" class="external-link">
+                🎯 Open Python Editor
+            </a>
+            <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 12px;">
+                <h4>Quick Test:</h4>
+                <pre style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; overflow-x: auto;">
+print("Hello Python!")
+name = input("Enter name: ")
+print(f"Hi {name}! Welcome to CodeHub")</pre>
+            </div>
+        </div>
+
+        <!-- C Editor - FIXED LINKS -->
+        <div id="c-tab" class="editor-content hidden">
+            <h3>⚡ C Compiler</h3>
+            <p>Professional C compilation with full stdio support:</p>
+            <a href="https://onecompiler.com/csharp" target="_blank" class="external-link">
+                🎯 Open C Compiler
+            </a>
+            <div style="margin-top: 2rem; padding: 1.5rem; background: #f8f9fa; border-radius: 12px;">
+                <h4>Quick Test:</h4>
+                <pre style="background: #1e1e1e; color: #d4d4d4; padding: 1rem; border-radius: 8px; overflow-x: auto;">
+#include &lt;stdio.h&gt;
+int main() {
+    printf("Hello C!
+");
+    int age;
+    printf("Enter age: ");
+    scanf("%d", &age);
+    printf("You are %d years old
+", age);
+    return 0;
+}</pre>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // FIXED: Tab switching function
+        function switchTab(tab) {
+            // Hide all tabs
+            document.querySelectorAll('.editor-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tab + '-tab').classList.remove('hidden');
+            event.target.classList.add('active');
+            
+            // Auto-run HTML preview on tab switch
+            if(tab === 'html-js') {
+                runHtmlCode();
+            }
+        }
+
+        // FIXED: HTML preview function
+        function runHtmlCode() {
+            const code = document.getElementById('code-editor').value;
+            const preview = document.getElementById('preview-frame');
+            
+            preview.srcdoc = code;  // Direct assignment - no regex needed!
+        }
+
+        // Auto-run on load
+        window.onload = function() {
+            runHtmlCode();
+        }
+
+        // Live preview while typing (debounced)
+        let timeout;
+        document.getElementById('code-editor').addEventListener('input', function() {
+            clearTimeout(timeout);
+            timeout = setTimeout(runHtmlCode, 500);
+        });
+    </script>
+
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="loginEmailPhone" placeholder="Email/Phone/Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegister()">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" name="fullName" placeholder="Full Name *" required>
+                <input type="email" name="email" placeholder="Email *" required>
+                <input type="tel" name="phone" placeholder="Phone Number *" required>
+                <input type="text" name="username" placeholder="Username *" required>
+                <input type="password" id="regPassword" placeholder="Password (6+ chars) *" required minlength="6">
+                <input type="password" id="regConfirmPassword" placeholder="Confirm Password *" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

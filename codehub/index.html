@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeHub - Interactive Coding Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 🎨 PERFECTED Course Cards */
+        .course-image {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px 12px 0 0;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 400;
+            font-family: 'Brush Script MT', cursive, 'Dancing Script', cursive;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            text-align: center;
+            line-height: 1.1;
+            letter-spacing: 1px;
+        }
+        
+        /* ✅ ALL TEXT CENTERED */
+        .course-card h3, 
+        .course-card p {
+            text-align: center !important;
+            margin: 0.5rem 0;
+            padding: 0 1rem;
+        }
+        
+        .course-card h3 {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        
+        .course-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        /* Center main heading */
+        .courses-container h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">CodeHub</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="html-course.html" class="nav-link">HTML</a></li>
+            <li><a href="css-course.html" class="nav-link">CSS</a></li>
+            <li><a href="js-course.html" class="nav-link">JavaScript</a></li>
+            <li><a href="python-course.html" class="nav-link">Python</a></li>
+            <li><a href="c-course.html" class="nav-link">C</a></li>
+            <li><a href="live-editor.html" class="nav-link">Live Editor</a></li>
+            <li><a href="#" onclick="showLogin()" id="loginBtn">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Learn Programming Interactively</h1>
+        <p>Master coding with hands-on tutorials and practice problems</p>
+    </div>
+
+    <!-- ✨ ABSOLUTELY PERFECT COURSES GRID -->
+    <div class="courses-container">
+        <h2>Choose Your Language</h2>
+        <div class="courses-grid" id="coursesGrid">
+            <a href="html-course.html" class="course-card html-card">
+                <div class="course-image" style="background: linear-gradient(135deg, #FF6B6B, #FF8E8E);">
+                    HTML
+                </div>
+                <h3>HTML</h3>
+                <p>Build web pages with semantic structure</p>
+            </a>
+            <a href="css-course.html" class="course-card css-card">
+                <div class="course-image" style="background: linear-gradient(135deg, #4ECDC4, #44A08D);">
+                    CSS
+                </div>
+                <h3>CSS</h3>
+                <p>Style your web pages beautifully</p>
+            </a>
+            <a href="js-course.html" class="course-card js-card">
+                <div class="course-image" style="background: linear-gradient(135deg, #45B7D1, #96CEB4);">
+                    JS
+                </div>
+                <h3>JavaScript</h3>
+                <p>Add interactivity to your sites</p>
+            </a>
+            <a href="python-course.html" class="course-card python-card">
+                <div class="course-image" style="background: linear-gradient(135deg, #96CEB4, #FECA57);">
+                    Python
+                </div>
+                <h3>Python</h3>
+                <p>Learn the most popular language</p>
+            </a>
+            <a href="c-course.html" class="course-card c-card">
+                <div class="course-image" style="background: linear-gradient(135deg, #FFEAA7, #DDA0DD);">
+                    C
+                </div>
+                <h3>C</h3>
+                <p>Master low-level programming</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>Login</h2>
+            <p id="loginMessage">Please login to track your progress</p>
+            <form id="loginForm">
+                <input type="text" id="loginEmailPhone" placeholder="Email/Phone/Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <a href="#" class="forgot-password" onclick="showRegister()">Need an account? Register</a>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegister()">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" name="fullName" placeholder="Full Name *" required>
+                <input type="email" name="email" placeholder="Email *" required>
+                <input type="tel" name="phone" placeholder="Phone Number *" required>
+                <input type="text" name="username" placeholder="Username *" required>
+                <input type="password" id="regPassword" placeholder="Password (6+ chars) *" required minlength="6">
+                <input type="password" id="regConfirmPassword" placeholder="Confirm Password *" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

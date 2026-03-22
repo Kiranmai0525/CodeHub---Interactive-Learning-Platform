@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Course - CodeHub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #FF9A56, #FF6B6B, #FFE66D) !important;
+            min-height: 100vh;
+        }
+        
+        .course-hero {
+            padding: 120px 2rem 80px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .course-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .course-hero p { font-size: 1.3rem; }
+        
+        .course-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .problems-list {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .problems-list h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+        }
+        
+        .problem-item {
+            background: white;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #FF9A56;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .problem-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF9A56, #FF6B6B);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
+        .problem-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .problem-description {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+        
+        .problem-code {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">CodeHub</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="html-course.html" class="nav-link">HTML</a></li>
+            <li><a href="css-course.html" class="nav-link">CSS</a></li>
+            <li><a href="js-course.html" class="nav-link active">JavaScript</a></li>
+            <li><a href="python-course.html" class="nav-link">Python</a></li>
+            <li><a href="c-course.html" class="nav-link">C</a></li>
+            <li><a href="live-editor.html" class="nav-link">Live Editor</a></li>
+            <li><a href="#" onclick="showLogin()">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <div class="course-hero">
+        <h1>JavaScript Fundamentals</h1>
+        <p>Make your websites interactive and alive</p>
+    </div>
+
+    <!-- 11 Problems with Code -->
+    <div class="course-content">
+        <div class="problems-list">
+            <h2>🎯 11 Practice Problems</h2>
+            
+            <!-- Problem 1 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">1</span>
+                    Show alert box
+                </div>
+                <div class="problem-description">
+                    Display a popup message to users.
+                </div>
+                <div class="problem-code">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+    &lt;title&gt;Alert&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+    &lt;script&gt;<br>
+        alert("Hello World!");<br>
+    &lt;/script&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+                </div>
+            </div>
+
+            <!-- Problem 2 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">2</span>
+                    Change text content
+                </div>
+                <div class="problem-description">
+                    Update text inside an HTML element.
+                </div>
+                <div class="problem-code">
+&lt;p id="demo"&gt;Original text&lt;/p&gt;<br>
+&lt;script&gt;<br>
+    document.getElementById("demo").innerHTML = "New text!";<br>
+&lt;/script&gt;
+                </div>
+            </div>
+
+            <!-- Problem 3 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">3</span>
+                    Get button click
+                </div>
+                <div class="problem-description">
+                    Detect when user clicks a button.
+                </div>
+                <div class="problem-code">
+&lt;button id="myBtn"&gt;Click Me&lt;/button&gt;<br>
+&lt;script&gt;<br>
+    document.getElementById("myBtn").onclick = function() {<br>
+        alert("Button clicked!");<br>
+    }<br>
+&lt;/script&gt;
+                </div>
+            </div>
+
+            <!-- Problem 4 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">4</span>
+                    Console.log message
+                </div>
+                <div class="problem-description">
+                    Print message to browser console (F12 to see).
+                </div>
+                <div class="problem-code">
+&lt;script&gt;<br>
+    console.log("Hello from console!");<br>
+    console.log("This appears in DevTools");<br>
+&lt;/script&gt;
+                </div>
+            </div>
+
+            <!-- Problem 5 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">5</span>
+                    Create variable
+                </div>
+                <div class="problem-description">
+                    Store data in a variable.
+                </div>
+                <div class="problem-code">
+&lt;script&gt;<br>
+    let name = "John";<br>
+    let age = 25;<br>
+    alert("Name: " + name + ", Age: " + age);<br>
+&lt;/script&gt;
+                </div>
+            </div>
+
+            <!-- Problem 6 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">6</span>
+                    Simple if statement
+                </div>
+                <div class="problem-description">
+                    Make decisions with if condition.
+                </div>
+                <div class="problem-code">
+&lt;script&gt;<br>
+    let age = 18;<br>
+    if (age >= 18) {<br>
+        alert("You are an adult!");<br>
+    } else {<br>
+        alert("You are a minor!");<br>
+    }<br>
+&lt;/script&gt;
+                </div>
+            </div>
+
+            <!-- Problem 7 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">7</span>
+                    Basic function
+                </div>
+                <div class="problem-description">
+                    Create reusable code with functions.
+                </div>
+                <div class="problem-code">
+&lt;script&gt;<br>
+    function sayHello(name) {<br>
+        alert("Hello " + name + "!");<br>
+    }<br>
+    sayHello("John");<br>
+&lt;/script&gt;
+                </div>
+            </div>
+
+            <!-- Problem 8 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">8</span>
+                    Change background color
+                </div>
+                <div class="problem-description">
+                    Change webpage background dynamically.
+                </div>
+                <div class="problem-code">
+&lt;button onclick="changeColor()"&gt;Change Color&lt;/button&gt;<br>
+&lt;script&gt;<br>
+    function changeColor() {<br>
+        document.body.style.backgroundColor = "#FF6B6B";<br>
+    }<br>
+&lt;/script&gt;
+                </div>
+            </div>
+
+            <!-- Problem 9 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">9</span>
+                    Get input value
+                </div>
+                <div class="problem-description">
+                    Read user input from form field.
+                </div>
+                <div class="problem-code">
+&lt;input type="text" id="userInput" placeholder="Enter name"&gt;<br>
+&lt;button onclick="showInput()"&gt;Show Input&lt;/button&gt;<br>
+&lt;p id="output"&gt;&lt;/p&gt;<br>
+&lt;script&gt;<br>
+    function showInput() {<br>
+        let value = document.getElementById("userInput").value;<br>
+        document.getElementById("output").innerHTML = "You typed: " + value;<br>
+    }<br>
+&lt;/script&gt;
+                </div>
+            </div>
+
+            <!-- Problem 10 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">10</span>
+                    Simple counter
+                </div>
+                <div class="problem-description">
+                    Create a click counter.
+                </div>
+                <div class="problem-code">
+&lt;p&gt;Count: &lt;span id="counter"&gt;0&lt;/span&gt;&lt;/p&gt;<br>
+&lt;button onclick="increment()"&gt;+1&lt;/button&gt;<br>
+&lt;script&gt;<br>
+    let count = 0;<br>
+    function increment() {<br>
+        count++;<br>
+        document.getElementById("counter").innerHTML = count;<br>
+    }<br>
+&lt;/script&gt;
+                </div>
+            </div>
+
+            <!-- Problem 11 - COMBO -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">11</span>
+                    <strong>🎉 COMBO CHALLENGE: Interactive Portfolio</strong>
+                </div>
+                <div class="problem-description">
+                    Combine ALL 10 JS skills into one interactive webpage!
+                </div>
+                <div class="problem-code">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+    &lt;title&gt;Interactive Portfolio&lt;/title&gt;<br>
+    &lt;style&gt;<br>
+        body { font-family: Arial; text-align: center; padding: 20px; }<br>
+        button { padding: 10px 20px; font-size: 16px; margin: 5px; }<br>
+        #counter { font-size: 24px; font-weight: bold; color: #FF6B6B; }<br>
+    &lt;/style&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+    &lt;h1 id="title"&gt;John Doe&lt;/h1&gt;<br>
+    &lt;p&gt;Full Stack Developer&lt;/p&gt;<br>
+    &lt;input type="text" id="nameInput" placeholder="Your name"&gt;<br>
+    &lt;br&gt;&lt;br&gt;<br>
+    &lt;button onclick="greetUser()"&gt;Greet Me&lt;/button&gt;<br>
+    &lt;button onclick="changeTheme()"&gt;Change Theme&lt;/button&gt;<br>
+    &lt;button onclick="showAge()"&gt;Check Age&lt;/button&gt;<br>
+    &lt;p&gt;Clicks: &lt;span id="clickCounter"&gt;0&lt;/span&gt;&lt;/p&gt;<br>
+    &lt;p id="output"&gt;&lt;/p&gt;<br>
+<br>
+    &lt;script&gt;<br>
+        let clickCount = 0;<br>
+<br>
+        function greetUser() {<br>
+            let name = document.getElementById("nameInput").value || "Friend";<br>
+            alert("Hello " + name + "! Welcome to my portfolio!");<br>
+            console.log("User greeted:", name);<br>
+        }<br>
+<br>
+        function changeTheme() {<br>
+            let colors = ["#FF6B6B", "#4ECDC4", "#FFE66D"];<br>
+            let randomColor = colors[Math.floor(Math.random() * 3)];<br>
+            document.body.style.backgroundColor = randomColor;<br>
+        }<br>
+<br>
+        function showAge() {<br>
+            let age = 25;<br>
+            if (age >= 18) {<br>
+                document.getElementById("output").innerHTML = "✅ Adult: " + age + " years old";<br>
+            } else {<br>
+                document.getElementById("output").innerHTML = "👶 Minor";<br>
+            }<br>
+        }<br>
+<br>
+        function incrementCounter() {<br>
+            clickCount++;<br>
+            document.getElementById("clickCounter").innerHTML = clickCount;<br>
+            document.getElementById("title").innerHTML = "John Doe - " + clickCount + " clicks";<br>
+        }<br>
+<br>
+        // Add click counter to all buttons<br>
+        greetUser = incrementCounter + greetUser;<br>
+        changeTheme = incrementCounter + changeTheme;<br>
+        showAge = incrementCounter + showAge;<br>
+    &lt;/script&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="loginEmailPhone" placeholder="Email/Phone/Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegister()">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" name="fullName" placeholder="Full Name *" required>
+                <input type="email" name="email" placeholder="Email *" required>
+                <input type="tel" name="phone" placeholder="Phone Number *" required>
+                <input type="text" name="username" placeholder="Username *" required>
+                <input type="password" id="regPassword" placeholder="Password (6+ chars) *" required minlength="6">
+                <input type="password" id="regConfirmPassword" placeholder="Confirm Password *" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

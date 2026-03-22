@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Course - CodeHub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #FF6B6B, #FF8E8E, #FFB6C1) !important;
+            min-height: 100vh;
+        }
+        
+        .course-hero {
+            padding: 120px 2rem 80px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .course-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .course-hero p { font-size: 1.3rem; }
+        
+        .course-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .problems-list {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .problems-list h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+        }
+        
+        .problem-item {
+            background: white;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #FF6B6B;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .problem-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF6B6B, #FF8E8E);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
+        .problem-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .problem-description {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+        
+        .problem-code {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">CodeHub</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="html-course.html" class="nav-link active">HTML</a></li>
+            <li><a href="css-course.html" class="nav-link">CSS</a></li>
+            <li><a href="js-course.html" class="nav-link">JavaScript</a></li>
+            <li><a href="python-course.html" class="nav-link">Python</a></li>
+            <li><a href="c-course.html" class="nav-link">C</a></li>
+            <li><a href="live-editor.html" class="nav-link">Live Editor</a></li>
+            <li><a href="#" onclick="showLogin()">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <div class="course-hero">
+        <h1>HTML Fundamentals</h1>
+        <p>Master the building blocks of web development</p>
+    </div>
+
+    <!-- 11 Problems with Code -->
+    <div class="course-content">
+        <div class="problems-list">
+            <h2>🎯 11 Practice Problems</h2>
+            
+            <!-- Problem 1 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">1</span>
+                    Create a webpage title
+                </div>
+                <div class="problem-description">
+                    Add a title that appears in the browser tab using the title tag.
+                </div>
+                <div class="problem-code">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+    &lt;title&gt;My First Webpage&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+                </div>
+            </div>
+
+            <!-- Problem 2 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">2</span>
+                    Add a main heading (h1)
+                </div>
+                <div class="problem-description">
+                    Create the largest heading on your webpage.
+                </div>
+                <div class="problem-code">
+&lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+                </div>
+            </div>
+
+            <!-- Problem 3 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">3</span>
+                    Create an ordered list (1,2,3)
+                </div>
+                <div class="problem-description">
+                    Make a numbered list with 3 items.
+                </div>
+                <div class="problem-code">
+&lt;ol&gt;<br>
+    &lt;li&gt;First item&lt;/li&gt;<br>
+    &lt;li&gt;Second item&lt;/li&gt;<br>
+    &lt;li&gt;Third item&lt;/li&gt;<br>
+&lt;/ol&gt;
+                </div>
+            </div>
+
+            <!-- Problem 4 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">4</span>
+                    Create an unordered list (bullets)
+                </div>
+                <div class="problem-description">
+                    Make a bulleted list with 3 items.
+                </div>
+                <div class="problem-code">
+&lt;ul&gt;<br>
+    &lt;li&gt;Apple&lt;/li&gt;<br>
+    &lt;li&gt;Banana&lt;/li&gt;<br>
+    &lt;li&gt;Orange&lt;/li&gt;<br>
+&lt;/ul&gt;
+                </div>
+            </div>
+
+            <!-- Problem 5 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">5</span>
+                    Add a paragraph with text
+                </div>
+                <div class="problem-description">
+                    Add a block of text to your webpage.
+                </div>
+                <div class="problem-code">
+&lt;p&gt;This is a paragraph with some sample text.&lt;/p&gt;
+                </div>
+            </div>
+
+            <!-- Problem 6 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">6</span>
+                    Create a simple link
+                </div>
+                <div class="problem-description">
+                    Make a clickable link to Google.
+                </div>
+                <div class="problem-code">
+&lt;a href="https://google.com"&gt;Visit Google&lt;/a&gt;
+                </div>
+            </div>
+
+            <!-- Problem 7 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">7</span>
+                    Add an image placeholder
+                </div>
+                <div class="problem-description">
+                    Add a placeholder image to your page.
+                </div>
+                <div class="problem-code">
+&lt;img src="https://via.placeholder.com/300x200" alt="Sample Image"&gt;
+                </div>
+            </div>
+
+            <!-- Problem 8 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">8</span>
+                    Create headings h2 + h3
+                </div>
+                <div class="problem-description">
+                    Add medium and small headings.
+                </div>
+                <div class="problem-code">
+&lt;h2&gt;About Me&lt;/h2&gt;<br>
+&lt;h3&gt;My Skills&lt;/h3&gt;
+                </div>
+            </div>
+
+            <!-- Problem 9 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">9</span>
+                    Make a simple form (name input)
+                </div>
+                <div class="problem-description">
+                    Create an input field for name.
+                </div>
+                <div class="problem-code">
+&lt;form&gt;<br>
+    &lt;input type="text" placeholder="Enter your name"&gt;<br>
+&lt;/form&gt;
+                </div>
+            </div>
+
+            <!-- Problem 10 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">10</span>
+                    Create a button
+                </div>
+                <div class="problem-description">
+                    Add a clickable button.
+                </div>
+                <div class="problem-code">
+&lt;button&gt;Click Me!&lt;/button&gt;
+                </div>
+            </div>
+
+            <!-- Problem 11 - COMBO -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">11</span>
+                    <strong>🎉 COMBO CHALLENGE: Complete webpage</strong>
+                </div>
+                <div class="problem-description">
+                    Combine ALL 10 skills into one complete webpage!
+                </div>
+                <div class="problem-code">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+    &lt;title&gt;My Portfolio&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+    &lt;h1&gt;John Doe&lt;/h1&gt;<br>
+    &lt;h2&gt;About Me&lt;/h2&gt;<br>
+    &lt;p&gt;Web developer learning HTML&lt;/p&gt;<br>
+    &lt;h3&gt;Skills&lt;/h3&gt;<br>
+    &lt;ul&gt;<br>
+        &lt;li&gt;HTML&lt;/li&gt;<br>
+        &lt;li&gt;CSS&lt;/li&gt;<br>
+    &lt;/ul&gt;<br>
+    &lt;a href="#contact"&gt;Contact&lt;/a&gt;<br>
+    &lt;img src="https://via.placeholder.com/300x200" alt="Photo"&gt;<br>
+    &lt;form&gt;<br>
+        &lt;input type="text" placeholder="Name"&gt;<br>
+        &lt;button&gt;Submit&lt;/button&gt;<br>
+    &lt;/form&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="loginEmailPhone" placeholder="Email/Phone/Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegister()">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" name="fullName" placeholder="Full Name *" required>
+                <input type="email" name="email" placeholder="Email *" required>
+                <input type="tel" name="phone" placeholder="Phone Number *" required>
+                <input type="text" name="username" placeholder="Username *" required>
+                <input type="password" id="regPassword" placeholder="Password (6+ chars) *" required minlength="6">
+                <input type="password" id="regConfirmPassword" placeholder="Confirm Password *" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

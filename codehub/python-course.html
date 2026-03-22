@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Course - CodeHub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb) !important;
+            min-height: 100vh;
+        }
+        
+        .course-hero {
+            padding: 120px 2rem 80px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .course-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .course-hero p { font-size: 1.3rem; }
+        
+        .course-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .problems-list {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .problems-list h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+        }
+        
+        .problem-item {
+            background: white;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .problem-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
+        .problem-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .problem-description {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+        
+        .problem-code {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">CodeHub</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="html-course.html" class="nav-link">HTML</a></li>
+            <li><a href="css-course.html" class="nav-link">CSS</a></li>
+            <li><a href="js-course.html" class="nav-link">JavaScript</a></li>
+            <li><a href="python-course.html" class="nav-link active">Python</a></li>
+            <li><a href="c-course.html" class="nav-link">C</a></li>
+            <li><a href="live-editor.html" class="nav-link">Live Editor</a></li>
+            <li><a href="#" onclick="showLogin()">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <div class="course-hero">
+        <h1>Python Fundamentals</h1>
+        <p>Learn the most powerful programming language</p>
+    </div>
+
+    <!-- 11 Problems with Code -->
+    <div class="course-content">
+        <div class="problems-list">
+            <h2>🎯 11 Practice Problems</h2>
+            
+            <!-- Problem 1 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">1</span>
+                    Print "Hello World"
+                </div>
+                <div class="problem-description">
+                    Display your first message in Python.
+                </div>
+                <div class="problem-code">
+print("Hello World!")<br>
+print("My first Python program!")
+                </div>
+            </div>
+
+            <!-- Problem 2 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">2</span>
+                    Create variable
+                </div>
+                <div class="problem-description">
+                    Store data using variables.
+                </div>
+                <div class="problem-code">
+name = "John"<br>
+age = 25<br>
+print("Name:", name)<br>
+print("Age:", age)
+                </div>
+            </div>
+
+            <!-- Problem 3 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">3</span>
+                    Basic arithmetic
+                </div>
+                <div class="problem-description">
+                    Perform simple calculations.
+                </div>
+                <div class="problem-code">
+a = 10<br>
+b = 3<br>
+print("Add:", a + b)<br>
+print("Subtract:", a - b)<br>
+print("Multiply:", a * b)<br>
+print("Divide:", a / b)
+                </div>
+            </div>
+
+            <!-- Problem 4 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">4</span>
+                    If statement
+                </div>
+                <div class="problem-description">
+                    Make decisions with conditions.
+                </div>
+                <div class="problem-code">
+age = 20<br>
+if age >= 18:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Adult")<br>
+else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Minor")
+                </div>
+            </div>
+
+            <!-- Problem 5 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">5</span>
+                    For loop 1-10
+                </div>
+                <div class="problem-description">
+                    Loop through numbers 1 to 10.
+                </div>
+                <div class="problem-code">
+for i in range(1, 11):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(i)
+                </div>
+            </div>
+
+            <!-- Problem 6 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">6</span>
+                    Simple function
+                </div>
+                <div class="problem-description">
+                    Create reusable code blocks.
+                </div>
+                <div class="problem-code">
+def greet(name):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Hello", name)<br>
+<br>
+greet("Alice")<br>
+greet("Bob")
+                </div>
+            </div>
+
+            <!-- Problem 7 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">7</span>
+                    User input
+                </div>
+                <div class="problem-description">
+                    Get input from user.
+                </div>
+                <div class="problem-code">
+name = input("Enter your name: ")<br>
+print("Hi", name, "welcome!")
+                </div>
+            </div>
+
+            <!-- Problem 8 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">8</span>
+                    List creation
+                </div>
+                <div class="problem-description">
+                    Create and display a list.
+                </div>
+                <div class="problem-code">
+fruits = ["apple", "banana", "orange"]<br>
+print("Fruits:", fruits)<br>
+print("First fruit:", fruits[0])
+                </div>
+            </div>
+
+            <!-- Problem 9 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">9</span>
+                    Basic list loop
+                </div>
+                <div class="problem-description">
+                    Loop through list items.
+                </div>
+                <div class="problem-code">
+fruits = ["apple", "banana", "orange"]<br>
+for fruit in fruits:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(fruit)
+                </div>
+            </div>
+
+            <!-- Problem 10 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">10</span>
+                    Simple calculator
+                </div>
+                <div class="problem-description">
+                    Build a basic calculator.
+                </div>
+                <div class="problem-code">
+num1 = float(input("Enter first number: "))<br>
+num2 = float(input("Enter second number: "))<br>
+print("Add:", num1 + num2)<br>
+print("Subtract:", num1 - num2)<br>
+print("Multiply:", num1 * num2)<br>
+print("Divide:", num1 / num2)
+                </div>
+            </div>
+
+            <!-- Problem 11 - COMBO -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">11</span>
+                    <strong>🎉 COMBO CHALLENGE: Complete Python Program</strong>
+                </div>
+                <div class="problem-description">
+                    Combine ALL 10 Python skills into one complete program!
+                </div>
+                <div class="problem-code">
+print("=== Welcome to Python Calculator ===")<br>
+<br>
+# Variables and Input<br>
+name = input("Enter your name: ")<br>
+print("Hello", name, "!")<br>
+<br>
+# Numbers 1-10 loop<br>
+print("
+Counting 1 to 10:")<br>
+for i in range(1, 11):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print(i)<br>
+<br>
+# Simple calculator<br>
+print("
+=== Simple Calculator ===")<br>
+num1 = float(input("First number: "))<br>
+num2 = float(input("Second number: "))<br>
+print("Result:", num1 + num2, num1 - num2, num1 * num2)<br>
+<br>
+# Age checker function<br>
+def check_age(age):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if age >= 18:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Adult"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return "Minor"<br>
+<br>
+age = int(input("Enter your age: "))<br>
+status = check_age(age)<br>
+print("Status:", status)<br>
+<br>
+# Fruit list<br>
+fruits = ["apple", "banana", "orange", "mango"]<br>
+print("
+Your fruits:", fruits)<br>
+for fruit in fruits:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("- " + fruit)<br>
+<br>
+print("
+✅ Program Complete!")
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="loginEmailPhone" placeholder="Email/Phone/Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegister()">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" name="fullName" placeholder="Full Name *" required>
+                <input type="email" name="email" placeholder="Email *" required>
+                <input type="tel" name="phone" placeholder="Phone Number *" required>
+                <input type="text" name="username" placeholder="Username *" required>
+                <input type="password" id="regPassword" placeholder="Password (6+ chars) *" required minlength="6">
+                <input type="password" id="regConfirmPassword" placeholder="Confirm Password *" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

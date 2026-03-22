@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Course - CodeHub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1E3C72, #2A5298, #4A90E2) !important;
+            min-height: 100vh;
+        }
+        
+        .course-hero {
+            padding: 120px 2rem 80px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .course-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .course-hero p { font-size: 1.3rem; }
+        
+        .course-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .problems-list {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .problems-list h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+        }
+        
+        .problem-item {
+            background: white;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #1E3C72;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .problem-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #1E3C72, #2A5298);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
+        .problem-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .problem-description {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+        
+        .problem-code {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">CodeHub</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="html-course.html" class="nav-link">HTML</a></li>
+            <li><a href="css-course.html" class="nav-link">CSS</a></li>
+            <li><a href="js-course.html" class="nav-link">JavaScript</a></li>
+            <li><a href="python-course.html" class="nav-link">Python</a></li>
+            <li><a href="c-course.html" class="nav-link active">C</a></li>
+            <li><a href="live-editor.html" class="nav-link">Live Editor</a></li>
+            <li><a href="#" onclick="showLogin()">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <div class="course-hero">
+        <h1>C Fundamentals</h1>
+        <p>Master the foundation of programming</p>
+    </div>
+
+    <!-- 11 Problems with Code -->
+    <div class="course-content">
+        <div class="problems-list">
+            <h2>🎯 11 Practice Problems</h2>
+            
+            <!-- Problem 1 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">1</span>
+                    Print "Hello World"
+                </div>
+                <div class="problem-description">
+                    Your first C program.
+                </div>
+                <div class="problem-code">
+#include &lt;stdio.h&gt;<br>
+<br>
+int main() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("Hello World!
+");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+}
+                </div>
+            </div>
+
+            <!-- Problem 2 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">2</span>
+                    Variable declaration
+                </div>
+                <div class="problem-description">
+                    Declare and use different variable types.
+                </div>
+                <div class="problem-code">
+#include &lt;stdio.h&gt;<br>
+<br>
+int main() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int age = 25;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;float height = 5.9;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;char grade = 'A';<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("Age: %d, Height: %.1f, Grade: %c
+", age, height, grade);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+}
+                </div>
+            </div>
+
+            <!-- Problem 3 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">3</span>
+                    Basic arithmetic
+                </div>
+                <div class="problem-description">
+                    Perform calculations with variables.
+                </div>
+                <div class="problem-code">
+#include &lt;stdio.h&gt;<br>
+<br>
+int main() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int a = 10, b = 3;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("Add: %d
+", a + b);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("Subtract: %d
+", a - b);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("Multiply: %d
+", a * b);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("Divide: %d
+", a / b);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+}
+                </div>
+            </div>
+
+            <!-- Problem 4 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">4</span>
+                    If statement
+                </div>
+                <div class="problem-description">
+                    Use conditional statements.
+                </div>
+                <div class="problem-code">
+#include &lt;stdio.h&gt;<br>
+<br>
+int main() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int age = 20;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if(age >= 18) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Adult
+");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Minor
+");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+}
+                </div>
+            </div>
+
+            <!-- Problem 5 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">5</span>
+                    For loop 1-10
+                </div>
+                <div class="problem-description">
+                    Print numbers 1 to 10 using for loop.
+                </div>
+                <div class="problem-code">
+#include &lt;stdio.h&gt;<br>
+<br>
+int main() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 1; i &lt;= 10; i++) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d ", i);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("
+");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+}
+                </div>
+            </div>
+
+            <!-- Problem 6 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">6</span>
+                    Simple function
+                </div>
+                <div class="problem-description">
+                    Create and call a custom function.
+                </div>
+                <div class="problem-code">
+#include &lt;stdio.h&gt;<br>
+<br>
+void sayHello(char name[]) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("Hello %s!
+", name);<br>
+}<br>
+<br>
+int main() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sayHello("John");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+}
+                </div>
+            </div>
+
+            <!-- Problem 7 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">7</span>
+                    Array declaration
+                </div>
+                <div class="problem-description">
+                    Create and display an array.
+                </div>
+                <div class="problem-code">
+#include &lt;stdio.h&gt;<br>
+<br>
+int main() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int numbers[5] = {10, 20, 30, 40, 50};<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; 5; i++) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d ", numbers[i]);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+}
+                </div>
+            </div>
+
+            <!-- Problem 8 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">8</span>
+                    Basic scanf/printf
+                </div>
+                <div class="problem-description">
+                    Get input from user and display it.
+                </div>
+                <div class="problem-code">
+#include &lt;stdio.h&gt;<br>
+<br>
+int main() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int age;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("Enter your age: ");
+&nbsp;&nbsp;&nbsp;&nbsp;scanf("%d", &amp;age);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("You are %d years old
+", age);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+}
+                </div>
+            </div>
+
+            <!-- Problem 9 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">9</span>
+                    Simple switch
+                </div>
+                <div class="problem-description">
+                    Use switch statement for menu choices.
+                </div>
+                <div class="problem-code">
+#include &lt;stdio.h&gt;<br>
+<br>
+int main() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int choice = 2;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;switch(choice) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 1: printf("Add
+"); break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 2: printf("Subtract
+"); break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default: printf("Other
+");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+}
+                </div>
+            </div>
+
+            <!-- Problem 10 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">10</span>
+                    Basic pointer
+                </div>
+                <div class="problem-description">
+                    Declare and use a pointer.
+                </div>
+                <div class="problem-code">
+#include &lt;stdio.h&gt;<br>
+<br>
+int main() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int num = 42;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int *ptr = &amp;num;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("Value: %d
+", num);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("Address: %p
+", (void*)ptr);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("Value via ptr: %d
+", *ptr);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+}
+                </div>
+            </div>
+
+            <!-- Problem 11 - COMBO -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">11</span>
+                    <strong>🎉 COMBO CHALLENGE: Complete C Program</strong>
+                </div>
+                <div class="problem-description">
+                    Combine ALL 10 C skills into one complete program!
+                </div>
+                <div class="problem-code">
+#include &lt;stdio.h&gt;<br>
+<br>
+void printNumbers() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 1; i &lt;= 10; i++) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d ", i);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("
+");<br>
+}<br>
+<br>
+int main() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("=== C Programming Demo ===
+");<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// Variables<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int age;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("Enter age: ");
+&nbsp;&nbsp;&nbsp;&nbsp;scanf("%d", &amp;age);<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// If statement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if(age >= 18) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Adult
+");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Minor
+");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// Function call<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printNumbers();<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// Array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int nums[5] = {10, 20, 30, 40, 50};<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; 5; i++) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d ", nums[i]);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("
+");<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// Pointer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int *ptr = &amp;nums[0];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("First via pointer: %d
+", *ptr);<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// Switch<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int choice;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("1=Add 2=Subtract: ");
+&nbsp;&nbsp;&nbsp;&nbsp;scanf("%d", &amp;choice);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;switch(choice) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 1: printf("Addition
+"); break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case 2: printf("Subtraction
+"); break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default: printf("Other
+");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printf("✅ Complete!
+");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return 0;<br>
+}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="loginEmailPhone" placeholder="Email/Phone/Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegister()">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" name="fullName" placeholder="Full Name *" required>
+                <input type="email" name="email" placeholder="Email *" required>
+                <input type="tel" name="phone" placeholder="Phone Number *" required>
+                <input type="text" name="username" placeholder="Username *" required>
+                <input type="password" id="regPassword" placeholder="Password (6+ chars) *" required minlength="6">
+                <input type="password" id="regConfirmPassword" placeholder="Confirm Password *" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

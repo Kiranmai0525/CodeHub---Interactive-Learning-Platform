@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Course - CodeHub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #4ECDC4, #44A08D, #93E6C8) !important;
+            min-height: 100vh;
+        }
+        
+        .course-hero {
+            padding: 120px 2rem 80px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .course-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .course-hero p { font-size: 1.3rem; }
+        
+        .course-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .problems-list {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .problems-list h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+        }
+        
+        .problem-item {
+            background: white;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 5px solid #4ECDC4;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .problem-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #4ECDC4, #44A08D);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
+        .problem-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .problem-description {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+        
+        .problem-code {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">CodeHub</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="html-course.html" class="nav-link">HTML</a></li>
+            <li><a href="css-course.html" class="nav-link active">CSS</a></li>
+            <li><a href="js-course.html" class="nav-link">JavaScript</a></li>
+            <li><a href="python-course.html" class="nav-link">Python</a></li>
+            <li><a href="c-course.html" class="nav-link">C</a></li>
+            <li><a href="live-editor.html" class="nav-link">Live Editor</a></li>
+            <li><a href="#" onclick="showLogin()">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <div class="course-hero">
+        <h1>CSS Fundamentals</h1>
+        <p>Style your web pages like a pro</p>
+    </div>
+
+    <!-- 11 Problems with Code -->
+    <div class="course-content">
+        <div class="problems-list">
+            <h2>🎯 11 Practice Problems</h2>
+            
+            <!-- Problem 1 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">1</span>
+                    Change background color
+                </div>
+                <div class="problem-description">
+                    Set a background color for any HTML element.
+                </div>
+                <div class="problem-code">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+    &lt;style&gt;<br>
+        body { background-color: #f0f0f0; }<br>
+    &lt;/style&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+    &lt;p&gt;This has gray background!&lt;/p&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+                </div>
+            </div>
+
+            <!-- Problem 2 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">2</span>
+                    Change text color
+                </div>
+                <div class="problem-description">
+                    Change the color of text content.
+                </div>
+                <div class="problem-code">
+&lt;h1 style=&quot;color: #333333;&quot;&gt;Dark text&lt;/h1&gt;<br>
+&lt;p style=&quot;color: #FF6B6B;&quot;&gt;Pink text&lt;/p&gt;
+                </div>
+            </div>
+
+            <!-- Problem 3 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">3</span>
+                    Make text bold
+                </div>
+                <div class="problem-description">
+                    Make any text appear bold.
+                </div>
+                <div class="problem-code">
+&lt;p style=&quot;font-weight: bold;&quot;&gt;This text is bold!&lt;/p&gt;<br>
+&lt;p&gt;This text is normal.&lt;/p&gt;
+                </div>
+            </div>
+
+            <!-- Problem 4 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">4</span>
+                    Change font size
+                </div>
+                <div class="problem-description">
+                    Increase or decrease text size.
+                </div>
+                <div class="problem-code">
+&lt;h1 style=&quot;font-size: 36px;&quot;&gt;Big Heading&lt;/h1&gt;<br>
+&lt;p style=&quot;font-size: 12px;&quot;&gt;Small text&lt;/p&gt;
+                </div>
+            </div>
+
+            <!-- Problem 5 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">5</span>
+                    Add padding to element
+                </div>
+                <div class="problem-description">
+                    Add internal spacing inside an element.
+                </div>
+                <div class="problem-code">
+&lt;div style=&quot;padding: 20px; background: #ddd;&quot;&gt;<br>
+&nbsp;&nbsp;This box has padding!<br>
+&lt;/div&gt;
+                </div>
+            </div>
+
+            <!-- Problem 6 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">6</span>
+                    Center text
+                </div>
+                <div class="problem-description">
+                    Horizontally center text content.
+                </div>
+                <div class="problem-code">
+&lt;div style=&quot;text-align: center;&quot;&gt;<br>
+&nbsp;&nbsp;&lt;h2&gt;Centered Text&lt;/h2&gt;<br>
+&nbsp;&nbsp;&lt;p&gt;This is centered!&lt;/p&gt;<br>
+&lt;/div&gt;
+                </div>
+            </div>
+
+            <!-- Problem 7 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">7</span>
+                    Change button color
+                </div>
+                <div class="problem-description">
+                    Style a button with custom colors.
+                </div>
+                <div class="problem-code">
+&lt;button style=&quot;background-color: #4CAF50; color: white; padding: 10px;&quot;&gt;<br>
+&nbsp;&nbsp;Green Button<br>
+&lt;/button&gt;
+                </div>
+            </div>
+
+            <!-- Problem 8 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">8</span>
+                    Add border to element
+                </div>
+                <div class="problem-description">
+                    Create a visible border around elements.
+                </div>
+                <div class="problem-code">
+&lt;div style=&quot;border: 3px solid #ddd; padding: 15px;&quot;&gt;<br>
+&nbsp;&nbsp;This has a border!<br>
+&lt;/div&gt;
+                </div>
+            </div>
+
+            <!-- Problem 9 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">9</span>
+                    Make text uppercase
+                </div>
+                <div class="problem-description">
+                    Transform text to all uppercase letters.
+                </div>
+                <div class="problem-code">
+&lt;p style=&quot;text-transform: uppercase;&quot;&gt;hello world&lt;/p&gt;<br>
+&lt;p&gt;normal text&lt;/p&gt;
+                </div>
+            </div>
+
+            <!-- Problem 10 -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">10</span>
+                    Change margin
+                </div>
+                <div class="problem-description">
+                    Control external spacing around elements.
+                </div>
+                <div class="problem-code">
+&lt;div style=&quot;margin: 30px; background: #eee; padding: 10px;&quot;&gt;<br>
+&nbsp;&nbsp;Box with margin<br>
+&lt;/div&gt;
+                </div>
+            </div>
+
+            <!-- Problem 11 - COMBO -->
+            <div class="problem-item">
+                <div class="problem-title">
+                    <span class="problem-number">11</span>
+                    <strong>🎉 COMBO CHALLENGE: Complete styled page</strong>
+                </div>
+                <div class="problem-description">
+                    Combine ALL 10 CSS skills into one beautiful webpage!
+                </div>
+                <div class="problem-code">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+    &lt;title&gt;My Portfolio&lt;/title&gt;<br>
+    &lt;style&gt;<br>
+        body {<br>
+            &nbsp;&nbsp;background-color: #f4f4f4;<br>
+            &nbsp;&nbsp;font-family: Arial, sans-serif;<br>
+            &nbsp;&nbsp;margin: 0;<br>
+            &nbsp;&nbsp;padding: 20px;<br>
+        }<br>
+        .container {<br>
+            &nbsp;&nbsp;margin: 40px auto;<br>
+            &nbsp;&nbsp;max-width: 800px;<br>
+        }<br>
+        h1 {<br>
+            &nbsp;&nbsp;color: #2c3e50;<br>
+            &nbsp;&nbsp;font-size: 36px;<br>
+            &nbsp;&nbsp;text-align: center;<br>
+        }<br>
+        .card {<br>
+            &nbsp;&nbsp;background: white;<br>
+            &nbsp;&nbsp;padding: 30px;<br>
+            &nbsp;&nbsp;border: 3px solid #3498db;<br>
+            &nbsp;&nbsp;border-radius: 10px;<br>
+        }<br>
+        button {<br>
+            &nbsp;&nbsp;background-color: #e74c3c;<br>
+            &nbsp;&nbsp;color: white;<br>
+            &nbsp;&nbsp;padding: 12px 24px;<br>
+            &nbsp;&nbsp;border: none;<br>
+            &nbsp;&nbsp;font-weight: bold;<br>
+        }<br>
+        .skills {<br>
+            &nbsp;&nbsp;text-transform: uppercase;<br>
+            &nbsp;&nbsp;font-weight: bold;<br>
+        }<br>
+    &lt;/style&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+    &lt;div class=&quot;container&quot;&gt;<br>
+        &lt;h1&gt;John Doe&lt;/h1&gt;<br>
+        &lt;div class=&quot;card&quot;&gt;<br>
+            &lt;p&gt;Full Stack Developer&lt;/p&gt;<br>
+            &lt;div class=&quot;skills&quot;&gt;HTML | CSS | JavaScript&lt;/div&gt;<br>
+            &lt;button&gt;Hire Me!&lt;/button&gt;<br>
+        &lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="loginEmailPhone" placeholder="Email/Phone/Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegister()">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" name="fullName" placeholder="Full Name *" required>
+                <input type="email" name="email" placeholder="Email *" required>
+                <input type="tel" name="phone" placeholder="Phone Number *" required>
+                <input type="text" name="username" placeholder="Username *" required>
+                <input type="password" id="regPassword" placeholder="Password (6+ chars) *" required minlength="6">
+                <input type="password" id="regConfirmPassword" placeholder="Confirm Password *" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
